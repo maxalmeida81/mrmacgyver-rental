@@ -37,10 +37,10 @@ export async function onRequestPost({ request, env }) {
     const name = String(data.name || "").trim();
     const email = String(data.email || "").trim();
     const phone = String(data.phone || "").trim();
-    const eventType = String(data.eventType || "").trim();
-    const eventDate = String(data.eventDate || "").trim();
+    const eventType = String(data.service || "").trim();
+    const eventDate = String(data.date || "").trim();
     const location = String(data.location || "").trim();
-    const message = String(data.message || "").trim();
+    const message = String(data.details || "").trim();
 
     if (!name || !email || !message ||
         name.length > 150 || email.length > 254 ||
